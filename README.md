@@ -31,7 +31,7 @@ To have this run daily automatically, we can setup a [cron job](https://en.wikip
 To set this up, first, we need to set an environment variable. Add the following to your bash\_profile:
 
 ```
-export MINIATURE_CALENDAR=/Users/jbeach/Code/Sandbox/miniature-calendar
+export MINIATURE_CALENDAR=/your/path/to/miniature-calendar
 ```
 
 The crontab\_command.sh script uses the `$MINIATURE_CALENDAR` variable to run our job.
