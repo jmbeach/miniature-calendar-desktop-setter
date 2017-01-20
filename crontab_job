@@ -1,2 +1,2 @@
 MINIATURE_CALENDAR="/Users/jbeach/Code/Sandbox/miniature-calendar"
-0 0 * * * cd $(echo $MINIATURE_CALENDAR | tr -d '\r') && python main.py
+30 6 * * * cd $MINIATURE_CALENDAR && /usr/bin/python main.py

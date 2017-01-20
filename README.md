@@ -13,7 +13,7 @@ git clone https://github.com/jmbeach/miniature-calendar-desktop-setter
 Then from inside the project's root directory, install the project's requirements
 
 ```
-pip install requirements.txt
+sudo pip install -r requirements.txt 
 ```
 
 ## Usage
