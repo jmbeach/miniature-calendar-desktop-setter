@@ -1,1 +1,2 @@
+MINIATURE_CALENDAR="/Users/jbeach/Code/Sandbox/miniature-calendar"
 0 0 * * * $MINIATURE_CALENDAR/crontab_command.sh

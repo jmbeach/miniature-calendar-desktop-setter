@@ -28,13 +28,11 @@ python main.py
 
 To have this run daily automatically, we can setup a [cron job](https://en.wikipedia.org/wiki/Cron). 
 
-To set this up, first, we need to set an environment variable. Add the following to your bash\_profile:
+To set this up, first, we need to modify the text in crontab\_job. Change the value of "MINIATURE\_CALENDAR" to point to the directory where you cloned the project. See below for example:
 
 ```
-export MINIATURE_CALENDAR=/your/path/to/miniature-calendar
+MINIATURE_CALENDAR=/your/path/to/miniature-calendar
 ```
-
-The crontab\_command.sh script uses the `$MINIATURE_CALENDAR` variable to run our job.
 
 Next, if you have a crontab file already, just add the contents of "crontab\_job" into your crontab file.
 
