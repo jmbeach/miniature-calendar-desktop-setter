@@ -1,6 +1,6 @@
 # Miniature Calendar Installer
 
-This is a python script which downloads the latest image from [miniature-calendar.com](http://miniature-calendar.com/) and sets it as your desktop background image. Currently only works on Mac.
+This is a python script which downloads the latest image from [miniature-calendar.com](http://miniature-calendar.com/) and sets it as your desktop background image. **Currently only works on Mac**.
 
 ## Install
 
@@ -45,3 +45,9 @@ crontab crontab_job
 Now, you should get your walpaper set to the latest miniature calendar image every day!
 
 If you ever want to stop this, just remove the line from you crontab file or run `crontab -r` to get rid of your crontab file completely
+
+## Roadmap
+
+* Unfortunately, at 1500x1500 pixels, these images don't really make great wallpapers.
+  * Enhance by super-imposing image on blurred version of image or on gradient color (using image's predominant color and scale so it fits nicely on 1920x1080). A little drop-shadow could be nice too.
+* Make the script work on linux (and maybe Windows)
