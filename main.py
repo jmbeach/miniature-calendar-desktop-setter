@@ -1,22 +1,18 @@
 import xml.etree.ElementTree as ET
 import requests
 import wget;
-import subprocess
-import os;
+import os
+import re
 
 r = requests.get('http://miniature-calendar.com/feed/');
 root = ET.fromstring(r.content);
 items = root.find('channel/item');
 ns = {'content': 'http://purl.org/rss/1.0/modules/content/'}
-content = items.find('content:encoded', ns).text;
-i = content.rfind('>')+1;
-content = content[:i];
-html = ET.fromstring(content);
-img = html.find('img');
-src = img.attrib.get('src');
-i = src.rfind('-');
-src = src[:i] + '.jpg';
-print src
+content = items.find('content:encoded', ns).text
+content = '<root>{content}<root>'.format(content=content)
+
+# remove non-ascii chars
+src = re.findall(r'srcset=\"([^ ]+)', content)[0]
 filename = 'todays-img.jpg'
 if os.path.exists(filename):
         os.remove(filename)
